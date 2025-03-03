@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91de7962-f173-414e-8345-ed5cb4982568" name="Changes" comment="chore: project requirements and gitignore">
-      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/meal.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/user.py" afterDir="false" />
+    <list default="true" id="91de7962-f173-414e-8345-ed5cb4982568" name="Changes" comment="feat: add db config and user routes">
       <change afterPath="$PROJECT_DIR$/routes/meals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,14 +34,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.app.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,12 +75,39 @@
       <option name="project" value="LOCAL" />
       <updated>1741022826697</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add models, meal and user">
+      <option name="closed" value="true" />
+      <created>1741027183004</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741027183004</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: add db">
+      <option name="closed" value="true" />
+      <created>1741027223937</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741027223937</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: add db config and user routes">
+      <option name="closed" value="true" />
+      <created>1741027261724</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1741027261724</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="docs: add README" />
     <MESSAGE value="chore: project requirements and gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: project requirements and gitignore" />
+    <MESSAGE value="feat: add models, meal and user" />
+    <MESSAGE value="feat: add db" />
+    <MESSAGE value="feat: add db config and user routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add db config and user routes" />
   </component>
 </project>

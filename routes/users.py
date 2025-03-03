@@ -1,13 +1,18 @@
 from flask import Blueprint, request, jsonify
 from flask_login import login_user, logout_user, login_required, current_user
+
+from app import login_manager
 from models.user import User
 from database import db
-from app import app
 import bcrypt
 
 user_bp = Blueprint("user_bp", __name__)
 
-@app.route('/user', methods=["POST"])
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
+@user_bp.route('/user', methods=["POST"])
 @login_required
 def create_user():
     data = request.json
@@ -27,7 +32,7 @@ def create_user():
     db.session.commit()
     return jsonify({"message": "Usuário cadastrado com sucesso"}), 201
 
-@app.route('/login', methods=['POST'])
+@user_bp.route('/login', methods=['POST'])
 def login():
     data = request.json
     username = data.get("username")
@@ -42,13 +47,13 @@ def login():
 
     return jsonify({"message": "Credenciais inválidas"}), 400
 
-@app.route('/logout', methods=['GET'])
+@user_bp.route('/logout', methods=['GET'])
 @login_required
 def logout():
   logout_user()
   return jsonify({"message": "Logout realizado com sucesso!"})
 
-@app.route('/user/<int:id_user>', methods=["GET"])
+@user_bp.route('/user/<int:id_user>', methods=["GET"])
 @login_required
 def read_user(id_user):
     user = User.query.get(id_user)
@@ -58,7 +63,7 @@ def read_user(id_user):
 
     return jsonify({"message": "Usuario não encontrado"}), 404
 
-@app.route('/user/<int:id_user>', methods=["PUT"])
+@user_bp.route('/user/<int:id_user>', methods=["PUT"])
 @login_required
 def update_user(id_user):
     data = request.json
@@ -71,7 +76,7 @@ def update_user(id_user):
 
     return jsonify({"message": "Usuario não encontrado"}), 404
 
-@app.route('/user/<int:id_user>', methods=["DELETE"])
+@user_bp.route('/user/<int:id_user>', methods=["DELETE"])
 @login_required
 def delete_user(id_user):
     user = User.query.get(id_user)
