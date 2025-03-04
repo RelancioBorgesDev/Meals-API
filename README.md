@@ -1,4 +1,4 @@
-# Desafio 02 - Python (Diet Api)
+# Desafio 02 - Python (Meals Api)
 
 ## ✅ Regras da Aplicação  
 
