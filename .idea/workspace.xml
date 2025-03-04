@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91de7962-f173-414e-8345-ed5cb4982568" name="Changes" comment="feat: add db config and user routes">
+    <list default="true" id="91de7962-f173-414e-8345-ed5cb4982568" name="Changes" comment="fix: add load user">
       <change afterPath="$PROJECT_DIR$/routes/meals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.py" afterDir="false" />
     </list>
@@ -37,6 +38,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.app.executor": "Run",
+    "Python.meals.executor": "Debug",
+    "Python.users.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
@@ -99,7 +102,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741027261724</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix: add load user">
+      <option name="closed" value="true" />
+      <created>1741029256455</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741029256455</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: add load user">
+      <option name="closed" value="true" />
+      <created>1741029280398</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1741029280398</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -108,6 +127,18 @@
     <MESSAGE value="feat: add models, meal and user" />
     <MESSAGE value="feat: add db" />
     <MESSAGE value="feat: add db config and user routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add db config and user routes" />
+    <MESSAGE value="fix: add load user" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: add load user" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/routes/meals.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

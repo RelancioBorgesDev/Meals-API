@@ -2,7 +2,7 @@
 
 ## ✅ Regras da Aplicação  
 
-- [ ] Registrar uma refeição com os seguintes dados:  
+- [ x ] Registrar uma refeição com os seguintes dados:  
   - Nome  
   - Descrição  
   - Data e Hora  
