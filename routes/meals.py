@@ -80,5 +80,20 @@ def delete_meal(id_meal):
         db.session.commit()
         return jsonify({"message": f"Usuário {id_meal} deletado com sucesso"})
 
+@meals_bp.route("/meal/peek/<int:id_meal>", methods=['GET'])
+@login_required
+def peek_meal(id_meal):
+    meal = Meal.query.get(id_meal)
 
+    if not meal:
+        return jsonify({"message": "Refeição não encontrada"}), 404
 
+    meal_data = {
+        "id": meal.id,
+        "name": meal.name,
+        "description": meal.description,
+        "date": meal.date,
+        "is_in_diet": meal.is_in_diet
+    }
+
+    return jsonify({"meal": meal_data, "message": f"Detalhes da refeição {id_meal}"}), 200

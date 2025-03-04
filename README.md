@@ -10,5 +10,5 @@
 - [ x ] Editar uma refeição, podendo alterar todos os dados acima  
 - [ x ] Apagar uma refeição  
 - [ ] Listar todas as refeições de um usuário  
-- [ ] Visualizar uma única refeição  
+- [ x ] Visualizar uma única refeição  
 - [ x ] Salvar as informações em um banco de dados
