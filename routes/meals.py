@@ -68,4 +68,17 @@ def edit_meal(id_meal):
         db.session.rollback()
         return jsonify({"message": "Erro ao atualizar refeição", "error": str(e)}), 500
 
+@meals_bp.route("/meal/delete/<int:id_meal>", methods=['DELETE'])
+@login_required
+def delete_meal(id_meal):
+    meal = Meal.query.get(id_meal)
+
+    if not meal:
+        return jsonify({"message": "Refeição não encontrada"}), 404
+    else:
+        db.session.delete(meal)
+        db.session.commit()
+        return jsonify({"message": f"Usuário {id_meal} deletado com sucesso"})
+
+
 
