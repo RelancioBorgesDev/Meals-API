@@ -7,7 +7,7 @@
   - Descrição  
   - Data e Hora  
   - Está dentro ou não da dieta  
-- [ ] Editar uma refeição, podendo alterar todos os dados acima  
+- [ x ] Editar uma refeição, podendo alterar todos os dados acima  
 - [ ] Apagar uma refeição  
 - [ ] Listar todas as refeições de um usuário  
 - [ ] Visualizar uma única refeição  

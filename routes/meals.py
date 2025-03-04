@@ -15,7 +15,7 @@ def register_meal():
         return jsonify({"message": "Content-Type must be application/json"}), 400
 
     try:
-        data = request.json
+        data = request.get_json()
         print(f"Dados recebidos: {data}")
 
         name = data.get("name")
@@ -40,5 +40,32 @@ def register_meal():
     except Exception as e:
         print(f"Erro: {e}")
         return jsonify({"message": "Erro ao registrar refeição"}), 500
+
+@meals_bp.route("/meal/edit/<int:id_meal>", methods=['POST'])
+@login_required
+def edit_meal(id_meal):
+    data = request.get_json()
+    meal = Meal.query.get(id_meal)
+
+    if not meal:
+        return jsonify({"message": "Refeição não encontrada"}), 404
+
+    try:
+        meal.name = data.get("name", meal.name)
+        meal.description = data.get("description", meal.description)
+        meal.date_str = data.get("date", meal.date)
+
+        if "is_in_diet" in data:
+            if isinstance(data["is_in_diet"], bool):
+                meal.is_in_diet = data["is_in_diet"]
+            else:
+                meal.is_in_diet = str(data["is_in_diet"]).strip().lower() in ["true", "1", "yes"]
+
+        db.session.commit()
+        return jsonify({"message": f"Refeição {id_meal} atualizada com sucesso"}), 200
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({"message": "Erro ao atualizar refeição", "error": str(e)}), 500
 
 
