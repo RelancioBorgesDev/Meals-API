@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91de7962-f173-414e-8345-ed5cb4982568" name="Changes" comment="fix: add load user">
-      <change afterPath="$PROJECT_DIR$/routes/meals.py" afterDir="false" />
+    <list default="true" id="91de7962-f173-414e-8345-ed5cb4982568" name="Changes" comment="feat: add peek meals">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/meal.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/meal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/meals.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/meals.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.app.executor": "Run",
-    "Python.meals.executor": "Debug",
+    "Python.meals.executor": "Run",
     "Python.users.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -118,7 +118,71 @@
       <option name="project" value="LOCAL" />
       <updated>1741029280398</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactpr: login_view in users">
+      <option name="closed" value="true" />
+      <created>1741097491940</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741097491940</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor: login_view in users">
+      <option name="closed" value="true" />
+      <created>1741097518246</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741097518246</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: add register meals">
+      <option name="closed" value="true" />
+      <created>1741097554096</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741097554096</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: add edit meals">
+      <option name="closed" value="true" />
+      <created>1741102242211</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741102242211</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: add edit meals">
+      <option name="closed" value="true" />
+      <created>1741102261279</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1741102261279</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: add delete meals">
+      <option name="closed" value="true" />
+      <created>1741102944629</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1741102944629</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: add peek meals">
+      <option name="closed" value="true" />
+      <created>1741103667218</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1741103667218</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: add peek meals">
+      <option name="closed" value="true" />
+      <created>1741103677003</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741103677003</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -128,17 +192,12 @@
     <MESSAGE value="feat: add db" />
     <MESSAGE value="feat: add db config and user routes" />
     <MESSAGE value="fix: add load user" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: add load user" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/routes/meals.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="refactpr: login_view in users" />
+    <MESSAGE value="refactor: login_view in users" />
+    <MESSAGE value="feat: add register meals" />
+    <MESSAGE value="feat: add edit meals" />
+    <MESSAGE value="feat: add delete meals" />
+    <MESSAGE value="feat: add peek meals" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add peek meals" />
   </component>
 </project>

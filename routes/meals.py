@@ -22,6 +22,7 @@ def register_meal():
         description = data.get("description")
         date_str = data.get("date")
         is_in_diet = data.get("is_in_diet")
+        user_id = data.get("user_id")
 
         if not all([name, description, date_str, is_in_diet]):
             return jsonify({"message": "Dados incompletos"}), 400
@@ -31,7 +32,7 @@ def register_meal():
         except ValueError:
             return jsonify({"message": "Formato de data inválido"}), 400
 
-        meal = Meal(name=name, description=description, date=date, is_in_diet=is_in_diet)
+        meal = Meal(name=name, description=description, date=date, is_in_diet=is_in_diet, user_id=user_id)
         db.session.add(meal)
         db.session.commit()
 
@@ -97,3 +98,25 @@ def peek_meal(id_meal):
     }
 
     return jsonify({"meal": meal_data, "message": f"Detalhes da refeição {id_meal}"}), 200
+
+@meals_bp.route("/meal/user/<int:user_id>", methods=['GET'])
+@login_required
+def list_meals(user_id):
+    meals = Meal.query.filter_by(user_id=user_id).all()
+
+    if not meals:
+        return jsonify({"message": "Nenhuma refeição encontrada para este usuário"}), 404
+
+    meals_data = [
+        {
+            "id": meal.id,
+            "name": meal.name,
+            "description": meal.description,
+            "date": meal.date,
+            "is_in_diet": meal.is_in_diet
+        }
+        for meal in meals
+    ]
+
+    return jsonify({"meals": meals_data, "message": f"Refeições do usuário {user_id}"}), 200
+

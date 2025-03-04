@@ -9,6 +9,6 @@
   - Está dentro ou não da dieta  
 - [ x ] Editar uma refeição, podendo alterar todos os dados acima  
 - [ x ] Apagar uma refeição  
-- [ ] Listar todas as refeições de um usuário  
+- [ x ] Listar todas as refeições de um usuário  
 - [ x ] Visualizar uma única refeição  
 - [ x ] Salvar as informações em um banco de dados
