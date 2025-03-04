@@ -1,10 +1,11 @@
 from flask import Blueprint, request, jsonify
-from flask_login import login_user, logout_user, login_required, current_user
-
-from app import login_manager
+from flask_login import login_user, logout_user, login_required, current_user, LoginManager
 from models.user import User
 from database import db
 import bcrypt
+
+login_manager = LoginManager()
+login_manager.login_view = 'user_bp.login'
 
 user_bp = Blueprint("user_bp", __name__)
 
@@ -12,8 +13,7 @@ user_bp = Blueprint("user_bp", __name__)
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-@user_bp.route('/user', methods=["POST"])
-@login_required
+@user_bp.route('/register', methods=["POST"])
 def create_user():
     data = request.json
     username = data.get("username")
@@ -32,7 +32,7 @@ def create_user():
     db.session.commit()
     return jsonify({"message": "Usuário cadastrado com sucesso"}), 201
 
-@user_bp.route('/login', methods=['POST'])
+@user_bp.route('/login', methods=['GET', 'POST'])
 def login():
     data = request.json
     username = data.get("username")
@@ -40,8 +40,9 @@ def login():
 
     if username and password:
         user = User.query.filter_by(username=username).first()
-        if user and bcrypt.checkpw(str.encode(password), str.encode(user.password)):
-            login_user(user)
+        if user and bcrypt.checkpw(password.encode('utf-8'), user.password):
+            login_user(user, remember=True)
+            print(f"Usuário logado: {current_user.id}, Autenticado: {current_user.is_authenticated}")
             print(current_user.is_authenticated)
             return jsonify({"message": "Auth feita com sucesso !"}), 200
 
